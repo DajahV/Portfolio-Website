@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contactForm">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="media/Dajah22.jpg" alt="My Picture">
+        <div>
+            <h1>Dajah Portfolio</h1>
+            <p>Hello, I'm <b>Dajah Vincent, a dedicated software developer with expertise in data analysis and front-end development. My technical proficiency spans a variety of tools and technologies, including:
+               <b> Data Analytics & Machine Learning: </b> (NumPy, Pandas, Scikit-learn), SQL, Power BI, Excel
+                <b> Software Development: </b> HTML, CSS, JavaScript
+                
+                I have successfully executed real-world projects, leveraging advanced data-driven solutions and intuitive UI/UX designs to optimize business workflows and enhance user experiences. I thrive on collaborating with businesses and teams to transform ideas into tangible, high-impact solutions. If you're looking for a data-driven and innovation-focused developer, let’s connect and build something great!
+                </p>
+            <button id="themeToggle" class="toggle-btn" data-label="Switch to Dark Mode">
+                <i id="themeIcon" class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <label for="html-skill">HTML, CSS & JavaScript</label>
+            <progress id="html-skill" value="70" max="100"></progress>
+            <span>70</span>
+        </div>
+        <div class="skill">
+            <label for="css-skill">Python Programmin</label>
+            <progress id="css-skill" value="60" max="100"></progress>
+            <span>60</span>
+        </div>
+        <div class="skill">
+            <label for="js-skill">Numpy, Pandas, Matplotlib</label>
+            <progress id="js-skill" value="70" max="100"></progress>
+            <span>70</span>
+        </div>
+        <div class="skill">
+            <label for="python-skill">SQL, Excel & Power BI</label>
+            <progress id="python-skill" value="75" max="100"></progress>
+            <span>75</span>
+        </div>        
+        <div class="skill"> <!-- New skill section -->
+            <label for="python-skill">Scikit Learn & Machine Learning Algorithms</label>
+            <progress id="python-skill" value="60" max="100"></progress>
+            <span>60</span>
+        </div> <!-- Closing div for new skill -->
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <a href="https://tinyurl.com/2b7pnou7" target="_blank">
+                    <h3>Weather Web Development Project</h3>
+                    <p> <i>This project integrates HTML and CSS for a sleek front-end experience, while Python powers the back-end, making API requests to OpenWeather. <br>Users can enter their preferred city and instantly access real-time weather data and other relevant details—all delivered seamlessly through a dynamic website. Click here to see more about this project</i></p>
+                </a>
+            </div>
+            <div class="project">
+                <a href="https://github.com/DajahV/Email-Spam-Detection-With-Machine-Learning" target="_blank">
+                    <h3>Spam Detection Project</h3>
+                    <p> <i>This machine learning project involved building a spam detection model using Python libraries, including NumPy, Seaborn, and Matplotlib for data preprocessing and visualization, and Scikit-learn for implementing machine learning algorithms. Various classification methods were tested to categorize text and email messages as either spam or non-spam. The Support Vector Machine (SVM) algorithm demonstrated superior performance, achieving an accuracy of 98.7%. Click here to see more about this project </i></p>
+                </a>
+            </div>
+            <div class="project">
+                <a href="https://github.com/DajahV/Sales-Prediction-With-Machine-Learning" target="_blank">
+                    <h3>Sales Prediction Project</h3>
+                    <p> <i>This machine learning project focused on predicting sales performance across various advertising mediums. Multiple algorithms were applied, with the variance between predicted and actual sales analyzed for accuracy. The Gradient Boosting algorithm consistently outperformed others by maintaining the lowest variance, demonstrating its reliability in sales prediction tasks. Click here to see more about this project </i></p>
+                </a>
+            </div>
+            <div class="project">
+                <a href="#contactForm">
+                    <h3>Wants to Know More About my Projects?</h3>
+                    <p>Click here to reach out to me </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume">
+        <h2>Download My Resume</h2>
+        <p>Click the button below to download my Resume:</p>
+        <a href="media/Dajah Vincent Resume.pdf" download class="download-btn">Download Resume</a>
+    </section>
+
+    <section>
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Dajah Vincent</p>
+        <div>
+            <a href="https://www.linkedin.com/in/dajahvincent/" target="_blank">
+                <img src="media/linkedin 2.png" alt="LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/DajahV" target="_blank">
+                <img src="media/github.png" alt="GitHub">
+                <span>GitHub</span>
+            </a>
+            <a href="https://web.facebook.com/Dajahvince/" target="_blank">
+                <img src="media/facebook2.png" alt="Facebook">
+                <span>Facebook</span>
+            </a>
+            <a href="https://twitter.com/yourprofile" target="_blank">
+                <img src="media/x2.png" alt="X">
+                <span>X</span>
+            </a>
+            
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

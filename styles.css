@@ -1,0 +1,533 @@
+/* Body background and text color */
+body {
+    background-color: #f5deb3; /* Light brown */
+    color: #333; /* Dark text for contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px; /* Space for the footer */
+}
+
+/* Header styles */
+header {
+    background-color: #add8e6; /* Light blue */
+    color: #333; /* Dark text for contrast */
+    padding: 20px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items apart */
+    text-align: left; /* Align text to the left */
+}
+
+header img {
+    border-radius: 50%;
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    margin-right: 20px; /* Add spacing between image and text */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
+}
+
+header img:hover {
+    box-shadow: 0 0 15px 5px rgb(234, 229, 229); /* Red glow effect */
+}
+
+header div {
+    flex: 1; /* Allow the bio section to take up remaining space */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #add8e6; /* Light blue */
+    color: #333; /* Dark text for contrast */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer div a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; /* Space between logo and text */
+    margin: 0 10px;
+    text-decoration: none;
+    color: transparent; /* Hide the text initially */
+    transition: color 0.3s ease;
+}
+
+footer div a img {
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer div a span {
+    opacity: 0; /* Hide the name initially */
+    transition: opacity 0.3s ease;
+}
+
+footer div a:hover {
+    color: #fff; /* Show the text color on hover */
+}
+
+footer div a:hover img {
+    box-shadow: 0 0 10px 5px #4caf50; /* Add a glow effect to the logo */
+}
+
+footer div a:hover span {
+    opacity: 1; /* Show the name on hover */
+}
+
+.skill {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add spacing between elements */
+}
+
+.skill span {
+    font-weight: bold;
+    color: #333;
+}
+
+.skill label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+progress {
+    width: 100%;
+    height: 20px;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+download-btn:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 600px) {
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+form#contactForm {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form#contactForm input[type="text"],
+form#contactForm input[type="email"] {
+    width: 48%; /* Make inputs take half the width */
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form#contactForm input[type="text"] {
+    margin-right: 4%; /* Add spacing between the two inputs */
+}
+
+form#contactForm textarea {
+    width: 100%;
+    height: 150px; /* Fixed height for the message box */
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1.2em; /* Make the text larger */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Prevent resizing */
+}
+
+form#contactForm button {
+    display: block; /* Ensure the button is on its own line */
+    width: auto; /* Adjust button width */
+    margin: 0 auto; /* Center the button */
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+form#contactForm button:hover {
+    background-color: #45a049;
+}
+
+/* Toggle button styles */
+.toggle-btn {
+    position: relative;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #4caf50;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toggle-btn:hover {
+    color: #45a049;
+    box-shadow: 0 0 15px 5px rgba(72, 239, 128, 0.6); /* Green glow effect */
+}
+
+/* Hover label styles */
+.toggle-btn::after {
+    content: attr(data-label); /* Use the data-label attribute for the text */
+    position: absolute;
+    top: 100%; /* Position below the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-50%) translateY(10px); /* Start slightly below */
+}
+
+.toggle-btn:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Move into view */
+}
+
+/* Light mode (default) */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header.light-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+section.light-mode {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+section.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+button.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+    border: 1px solid #555;
+}
+
+button.dark-mode:hover {
+    background-color: #444;
+}
+
+progress.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+a.dark-mode {
+    color: #4caf50;
+}
+
+a.dark-mode:hover {
+    color: #45a049;
+}
+
+#projects {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project a {
+    text-decoration: none;
+    color: #333;
+}
+
+.project a h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #4caf50;
+}
+
+.project a p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.project a:hover h3 {
+    color: #45a049;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: #add8e6; /* Light blue */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333; /* Dark text for contrast */
+    font-size: 1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #87ceeb; /* Slightly darker blue on hover */
+    color: #fff;
+}
+
+/* Button styles */
+button, .download-btn {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .download-btn:hover {
+    background-color: #45a049;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+.navbar.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+.navbar ul li a.dark-mode {
+    color: #f4f4f4;
+}
+
+.navbar ul li a.dark-mode:hover {
+    background-color: #333;
+    color: #4caf50;
+}
+
+section.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button.dark-mode, .download-btn.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+    border: 1px solid #555;
+}
+
+button.dark-mode:hover, .download-btn.dark-mode:hover {
+    background-color: #444;
+}
+
+a.dark-mode {
+    color: #4caf50;
+}
+
+a.dark-mode:hover {
+    color: #45a049;
+}
+
+progress.dark-mode::-webkit-progress-bar {
+    background-color: #333;
+}
+
+progress.dark-mode::-webkit-progress-value {
+    background-color: #4caf50;
+}
+
+/* Dark mode styles for Contact Form */
+form#contactForm.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border: 1px solid #555;
+}
+
+form#contactForm input[type="text"].dark-mode,
+form#contactForm input[type="email"].dark-mode,
+form#contactForm textarea.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+    border: 1px solid #555;
+}
+
+form#contactForm button.dark-mode {
+    background-color: #444;
+    color: #f4f4f4;
+    border: 1px solid #555;
+}
+
+form#contactForm button.dark-mode:hover {
+    background-color: #555;
+}
+
+/* Dark mode styles for My Projects */
+.project-container.dark-mode {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+}
+
+.project.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+    border: 1px solid #555;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project a.dark-mode {
+    color: #4caf50;
+}
+
+.project a.dark-mode:hover {
+    color: #45a049;
+}
